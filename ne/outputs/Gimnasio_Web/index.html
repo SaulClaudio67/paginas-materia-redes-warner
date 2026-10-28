@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Explora ejercicios de fuerza del catálogo abierto de wger.">
+  <title>Fuerza Base | Catálogo de ejercicios</title>
+  <link rel="stylesheet" href="style.css"><script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#catalogo">Saltar al catálogo</a>
+  <header class="topbar"><a class="brand" href="#inicio" aria-label="Fuerza Base, inicio"><span class="brand-icon" aria-hidden="true">FB</span><span><small>ENTRENA CON CRITERIO</small><b>FUERZA BASE</b></span></a><button id="theme-toggle" class="button subtle" type="button" aria-pressed="false">◐ <span>Tema oscuro</span></button></header>
+  <main id="inicio">
+    <section class="hero"><p class="eyebrow">CATÁLOGO ABIERTO DE EJERCICIOS</p><h1>Tu próxima repetición<br><em>empieza aquí.</em></h1><p>Explora movimientos, consulta el grupo muscular y guarda ejercicios para volver a encontrarlos.</p><div class="hero-tags"><span>FUERZA</span><span>MOVILIDAD</span><span>PROGRESO</span></div></section>
+    <section class="toolbar" aria-label="Buscar y filtrar ejercicios">
+      <label class="search">Buscar ejercicio<input id="search" type="search" placeholder="Ej. sentadilla, press…" autocomplete="off"></label>
+      <label>Grupo muscular<select id="muscle-filter"><option value="all">Todos los grupos</option></select></label>
+      <label>Equipo<select id="equipment-filter"><option value="all">Todo el equipo</option></select></label>
+      <button id="sort" class="button outline" type="button" aria-pressed="false">A–Z</button>
+      <button id="favorites-view" class="button outline" type="button" aria-pressed="false">♡ Favoritos <span id="favorite-count">0</span></button>
+    </section>
+    <div class="section-title"><div><p class="eyebrow">BIBLIOTECA</p><h2 id="catalog-title">Ejercicios</h2></div><p id="result-count" aria-live="polite"></p></div>
+    <p id="status" class="status" role="status" aria-live="polite">Cargando ejercicios…</p>
+    <section id="catalogo" class="grid" aria-label="Catálogo de ejercicios"></section>
+    <nav class="pagination" aria-label="Páginas de resultados"><button id="previous" class="button outline" type="button" disabled>← Anterior</button><span id="page-number">Página 1</span><button id="next" class="button outline" type="button" disabled>Siguiente →</button></nav>
+    <section class="notice"><strong>Entrenamiento responsable</strong><p>Esta página es un catálogo informativo, no sustituye la instrucción de un profesional. Elige cargas adecuadas a tu experiencia y detén el ejercicio si sientes dolor.</p></section>
+  </main>
+  <footer><p>Datos consultados desde <a href="https://wger.readthedocs.io/en/latest/api/api.html" target="_blank" rel="noreferrer">wger REST API</a>. Revisa la licencia y atribución del registro original. Proyecto académico de Saul Ulises Claudio Chan.</p></footer>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Explora personajes del multiverso de Rick y Morty usando una API pública.">
+  <title>Portal del Multiverso</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#catalogo">Saltar al catálogo</a>
+  <header class="site-header">
+    <div class="brand"><span class="brand-mark" aria-hidden="true">✦</span><div><p class="eyebrow">ARCHIVO INTERDIMENSIONAL</p><h1>Portal del Multiverso</h1></div></div>
+    <button id="theme-toggle" class="button button-quiet" type="button" aria-pressed="false">☾ <span>Tema oscuro</span></button>
+  </header>
+  <main>
+    <section class="intro" aria-labelledby="intro-title">
+      <p class="eyebrow">EXPLORACIÓN DE PERSONAJES</p>
+      <h2 id="intro-title">Cada universo tiene una historia.</h2>
+      <p>Consulta personajes, filtra sus características y guarda tus favoritos para volver a encontrarlos.</p>
+    </section>
+    <section class="controls" aria-label="Controles del catálogo">
+      <label class="search-label" for="search-input">Buscar personaje
+        <input id="search-input" type="search" placeholder="Ej. Rick, Morty…" autocomplete="off">
+      </label>
+      <label for="status-filter">Estado
+        <select id="status-filter"><option value="all">Todos</option><option value="alive">Vivo</option><option value="dead">Fallecido</option><option value="unknown">Desconocido</option></select>
+      </label>
+      <label for="species-filter">Especie
+        <select id="species-filter"><option value="all">Todas</option></select>
+      </label>
+      <button id="sort-toggle" class="button button-outline" type="button" aria-pressed="false">Orden: API</button>
+      <button id="favorites-toggle" class="button button-outline" type="button" aria-pressed="false">☆ Mis favoritos <span id="favorite-count">0</span></button>
+    </section>
+    <div class="catalogue-heading"><h2 id="catalog-title">Personajes</h2><p id="result-count" aria-live="polite"></p></div>
+    <p id="notice" class="notice" role="status" aria-live="polite">Conectando con el archivo…</p>
+    <section id="catalogo" class="character-grid" aria-label="Catálogo de personajes"></section>
+    <nav class="pagination" aria-label="Paginación">
+      <button id="prev-page" class="button button-outline" type="button" disabled>← Anterior</button>
+      <span id="page-label">Página 1</span>
+      <button id="next-page" class="button button-outline" type="button" disabled>Siguiente →</button>
+    </nav>
+  </main>
+  <footer><p>Datos e imágenes consultados desde <a href="https://rickandmortyapi.com/documentation" target="_blank" rel="noreferrer">The Rick and Morty API</a>. Proyecto académico de Saul Ulises Claudio Chan.</p></footer>
+</body>
+</html>
